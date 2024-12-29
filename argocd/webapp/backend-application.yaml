@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backend-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/AvatarZorak/E-Markbook
+    targetRevision: main
+    path: backend/
+  destination:
+    name: in-cluster
