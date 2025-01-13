@@ -15,8 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend-pod
-          image: dp_backend
-          imagePullPolicy: Never
+          image: nginx:latest
           ports:
             - containerPort: 5000
 
@@ -31,12 +30,3 @@ spec:
     - port: 5000
   selector:
     app: backend
-
----
-kind: Pod
-apiVersion: v1
-metadata:
-  name: test-pod
-  namespace: default
-spec:
-  image: nginx
