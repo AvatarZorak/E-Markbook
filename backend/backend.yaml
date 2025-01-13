@@ -31,3 +31,12 @@ spec:
     - port: 5000
   selector:
     app: backend
+
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-pod
+  namespace: default
+spec:
+  image: nginx
