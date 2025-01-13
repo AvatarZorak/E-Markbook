@@ -10,4 +10,4 @@ spec:
     targetRevision: main
     path: backend/
   destination:
-    name: in-cluster
+    name: remote
